@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <style>
+      /* resets */
+
+      * {
+        margin: 0;
+        box-sizing: border-box;
+        outline: 0;
+        text-decoration: none;
+      }
+
+      /* global styles (body, fonts, margins) */
+
+      html {
+        background-color: #FFF;
+        color: #515151;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        font-weight: 300;
+      }
+
+      h1, h2, h3, h4, h5, h6, header {
+        color: #303030;
+        font-family: "Pacifico", cursive;
+      }
+
+      header,
+      main,
+      footer {
+        padding: 2rem 1rem;
+      }
+
+      /* Grid */
+
+      .grid {
+        display: flex;
+        font-size: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .grid-entry {
+        flex-basis: 100%;
+        padding: 1em 0;
+      }
+
+      .grid-entry > img {
+        border-radius: 50%;
+        float: left;
+        margin-right: 1em;
+        position: relative;
+        width: 6em;
+      }
+
+      @media (min-width: 28em) {
+        .grid-entry {
+          flex-basis: 48%;
+          text-align: center;
+        }
+
+        .grid-entry > img {
+          float: none;
+          position: default;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 38em) {
+        .grid-entry {
+          flex-basis: 31%;
+        }
+      }
+
+      @media (min-width: 58em) {
+        .grid-entry {
+          flex-basis: 23%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Herztöne</h1>
+      Exklusive Hochzeitsmusik
+    </header>
+    <main>
+      <article>
+        <h2>Ihre Herzenswünsche...</h2>
+      </article>
+      <article>
+        <h2>...sind unsere Herzensanliegen</h2>
+        <div class="grid">
+          <div class="grid-entry">
+            <img src="david.webp" />
+            <h3>David</h3>
+            <span>Gitarre, Piano, Keyboard, Bass</span>
+          </div>
+          <div class="grid-entry">
+            <img src="christine.webp" />
+            <h3>Christine</h3>
+            <span>Songwriter, Violine, Piano, Keyboard, Musikalische Umsetzung</span>
+          </div>
+          <div class="grid-entry">
+            <img src="daniel.webp" />
+            <h3>Daniel</h3>
+            <span>Percussions, Tenor</span>
+          </div>
+          <div class="grid-entry">
+            <img src="jennifer.webp" />
+            <h3>Jennifer</h3>
+            <span>Piano, Harfe</span>
+          </div>
+          <div class="grid-entry">
+            <img src="michael.webp" />
+            <h3>Michael</h3>
+            <span>Keyboard, Piano</span>
+          </div>
+          <div class="grid-entry">
+            <img src="sabine.webp" />
+            <h3>Sabine</h3>
+            <span>Piano, Keyboard</span>
+          </div>
+          <div class="grid-entry">
+            <img src="rahel.webp" />
+            <h3>Rahel</h3>
+            <span>Violine, Viola, Piano, Keyboard, Orgel, Musikalische Umsetzung</span>
+          </div>
+          <div class="grid-entry">
+            <img src="markus.webp" />
+            <h3>Markus</h3>
+            <span>Piano, Keyboard, Songwriter</span>
+          </div>
+          <div class="grid-entry">
+            <img src="drums.webp" />
+            <h3>Ergänzung</h3>
+            <span>Drums, Querflöte, Cello,...</span>
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

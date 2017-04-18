@@ -138,8 +138,12 @@
         counter-increment: step;
         flex-basis: 24%;
         font-size: 16px;
-        padding: 1em;
+        margin-bottom: 1em;
         text-align: center;
+      }
+
+      ol > li p {
+        padding: 1em;
       }
 
       ol > li h3 {
@@ -153,7 +157,7 @@
 
       ol > li::before {
         content: "0" counter(step);
-        font-size: 3em;
+        font-size: 2.5em;
       }
 
     </style>
@@ -223,26 +227,26 @@
       </article>
       <article class="steps">
         <h2>Ihre Wünsche – vier Schritte</h2>
-        <ol>
-          <li>
+        <ol class="grid">
+          <li class="grid-entry">
             <h3>Beratung</h3>
             <p>
               In einem ersten Vorgespräch schildern Sie uns Ihre Wünsche. Erste Ideen werden skizziert.
             </p>
           </li>
-          <li>
+          <li class="grid-entry">
             <h3>Umsetzung</h3>
             <p>
               Ihre Wünsche und Ideen kommen nun in unseren musikalischen Maschinenraum, wo sie umgesetzt und eingeübt werden.
             </p>
           </li>
-          <li>
+          <li class="grid-entry">
             <h3>Ihr großer Tag</h3>
             <p>
               An Ihrem großen Tag geht es nur um Sie. Sie stehen im Mittelpunkt. Damit das so sein kann, geschehen unser Auf- und Abbau völlig geräuschlos im Hintergrund.
             </p>
           </li>
-          <li>
+          <li class="grid-entry">
             <h3>Erinnerungen</h3>
             <p>
               Nach Möglichkeit finden Sie - nachdem Sie wundervolle Flitterwochen verlebt haben - in Ihrem Briefkasten Ihre exklusive Ein- und Auszugsstücke auf CD.

@@ -117,6 +117,40 @@
         margin-top: 1em;
       }
 
+      /* Steps */
+
+      ol {
+        counter-reset: step;
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+      }
+
+      ol > li {
+        background-color: #897c77;
+        color: white;
+        counter-increment: step;
+        flex-basis: 24%;
+        font-size: 16px;
+        padding: 1em;
+        text-align: center;
+      }
+
+      ol > li h3 {
+        font-size: 1.5em;
+        margin: 0.5em 0;
+      }
+
+      ol > li * {
+        color: white;
+      }
+
+      ol > li::before {
+        content: "0" counter(step);
+        font-size: 3em;
+      }
+
     </style>
   </head>
   <body>

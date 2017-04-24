@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-
     <style>
       /* resets */
 
@@ -19,104 +17,122 @@
       /* global styles (body, fonts, margins) */
 
       html {
-        background-color: #FFF;
-        color: #515151;
+        background-color: #f5e6e8;
+        color: #2d2222;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         font-size: 20px;
         line-height: 1.5;
+        font-weight: 200;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
         font-weight: 300;
       }
 
-      h1, h2, h3, h4, h5, h6, header {
-        color: #303030;
-        font-family: "Pacifico", cursive;
-      }
+      /* Fluid layout with max-width */
 
       header,
-      article,
+      section,
       footer {
-        padding: 2rem 1rem;
+        overflow: hidden;
+        padding: 1rem calc((100vw - 900px) / 2);
+        position: relative;
+      }
+
+      header > *,
+      section > *,
+      footer > * {
+        margin: 0 1rem;
+      }
+
+      /* Links */
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        border-bottom: 1px solid currentColor;
+      }
+
+      /* Primary colors */
+
+      .primary {
+        background-color: #2d2222;
+        color: #f5e6e8;
       }
 
       /* Header */
 
-      header {
-        color: white;
-        font-size: 200%;
-        height: 30rem;
-        overflow: hidden;
-        position: relative;
+      header > * {
+        display: inline;
       }
 
-      header > video {
+      header nav > * + * {
+        margin-left: 1em;
+      }
+
+      /* Intro */
+
+      .intro {
+        border: 0.5em solid #d4aa7d;
+        border-left: none;
+        border-right: none;
+        height: calc(100vh - 5rem);
+      }
+
+      .intro > p {
+        bottom: 1em;
+        color: #f5e6e8;
+        font-size: 1.5em;
+        position: absolute;
+      }
+
+      .intro::before,
+      .intro::after {
+        bottom: -1em;
+        content: '';
+        display: block;
+        left: -1em;
+        position: absolute;
+        right: -1em;
+        top: -1em;
+        z-index: -1;
+      }
+
+      .intro::before {
+        background-image: url(https://static.wixstatic.com/media/8a455f121bcc46a0bbb724a330b78ddb.jpg/v1/crop/x_137,y_593,w_980,h_735,q_85/8a455f121bcc46a0bbb724a330b78ddb.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+
+      .intro::after {
+          background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 0%, rgba(45, 34, 34, 0.98) 85%, rgba(45, 34, 34, 1) 100%);
+      }
+
+      .intro button {
+        background-color: #2d2222;
+        border: 0.5em solid #d4aa7d;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 5em;
         left: 50%;
-        min-height: 100%;
-        min-width: 100%;
         position: absolute;
         top: 50%;
         transform: translate(-50%, -50%);
-        width: 58rem;
-        z-index: -100;
+        width: 5em;
       }
 
-      /* Grid */
-
-      .grid {
-        display: flex;
-        font-size: 16px;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      .grid-entry {
-        flex-basis: 100%;
-        padding: 1em 0;
-      }
-
-      .grid-entry > img {
-        border-radius: 50%;
-        float: left;
-        margin-right: 1em;
-        position: relative;
-        width: 6em;
-      }
-
-      @media (min-width: 28em) {
-        .grid-entry {
-          flex-basis: 48%;
-          text-align: center;
-        }
-
-        .grid-entry > img {
-          float: none;
-          position: default;
-          width: 100%;
-        }
-      }
-
-      @media (min-width: 38em) {
-        .grid-entry {
-          flex-basis: 31%;
-        }
-      }
-
-      @media (min-width: 58em) {
-        .grid-entry {
-          flex-basis: 23%;
-        }
-      }
-
-      /* Primary */
-
-      .primary,
-      .primary * {
-        color: white;
-      }
-
-      /* Main */
-
-      main > * + * {
-        margin-top: 1em;
+      .intro button::before {
+        border: 1.25em solid transparent;
+        border-left: 2em solid #f5e6e8;
+        content: "";
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-25%, -50%);
       }
 
       /* Steps */
@@ -167,12 +183,24 @@
   <body>
     <header class="primary">
       <h1>Herztöne</h1>
-      Exklusive Hochzeitsmusik
-      <video playsinline autoplay muted loop poster="https://s3.amazonaws.com/coverr-public/poster/Strum-Away.jpg" id="bgvid">
-        <source src="https://coverr.co/s3/mp4/Strum-Away.mp4" type="video/webm">
-        <source src="https://coverr.co/s3/mp4/Strum-Away.mp4" type="video/mp4">
-      </video>
+      <nav>
+        <a href="#team">Das Team</a>
+        <a href="#weg">Der Weg</a>
+        <a href="#preise">Preise</a>
+      </nav>
     </header>
+    <section class="intro">
+      <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
+      <button onClick="document.querySelector('audio').play()"></button>
+      <p>Stell Dir vor, zu dieser Musik einzulaufen...</p>
+    </section>
+    <section>
+      <h2>Wir sind die Herztöne</h2>
+      <p>Das sind wir. Alle verheiratet – alle mithilfe der Musik der Herztöne.</p>
+    </section>
+    <section class="primary">
+      <h2>Die Schritte zur Traummusik</h2>
+    </section>
     <main>
       <article>
         <h2>Ihre Herzenswünsche...</h2>

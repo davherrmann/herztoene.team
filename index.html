@@ -96,9 +96,12 @@
 
       .intro > p {
         bottom: 1em;
-        color: #f5e6e8;
         font-size: 1.5em;
         position: absolute;
+      }
+
+      .intro > * {
+        z-index: 1;
       }
 
       .intro::before,
@@ -110,7 +113,6 @@
         position: absolute;
         right: -1em;
         top: -1em;
-        z-index: -1;
       }
 
       .intro::before {
@@ -202,7 +204,7 @@
         <a href="#preise">Preise</a>
       </nav>
     </header>
-    <section class="intro">
+    <section class="intro primary">
       <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
       <button onClick="document.querySelector('audio').play()"></button>
       <p>Stell Dir vor, zu dieser Musik einzulaufen...</p>

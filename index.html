@@ -150,49 +150,6 @@
         transform: translate(-25%, -50%);
       }
 
-      /* Steps */
-
-      .steps {
-        background: url(https://static.wixstatic.com/media/c2d18ee301da4824a558078be5a596fd.jpg/v1/fill/w_1960,h_1452,al_c,q_90,usm_0.66_1.00_0.01/c2d18ee301da4824a558078be5a596fd.jpg);
-        background-size: cover;
-      }
-
-      ol {
-        counter-reset: step;
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0;
-      }
-
-      ol > li {
-        background-color: #897c77;
-        color: white;
-        counter-increment: step;
-        flex-basis: 24%;
-        font-size: 16px;
-        margin-bottom: 1em;
-        text-align: center;
-      }
-
-      ol > li p {
-        padding: 1em;
-      }
-
-      ol > li h3 {
-        font-size: 1.5em;
-        margin: 0.5em 0;
-      }
-
-      ol > li * {
-        color: white;
-      }
-
-      ol > li::before {
-        content: "0" counter(step);
-        font-size: 2.5em;
-      }
-
     </style>
   </head>
   <body>

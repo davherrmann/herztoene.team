@@ -329,6 +329,42 @@
         padding: 0.5em;
       }
 
+      /* Testimonials */
+
+      #testimonials ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      #testimonials li {
+        padding-left: 2em;
+      }
+
+      #testimonials li + li {
+        margin-top: 1em;
+      }
+
+      #testimonials li::before {
+        content: '“';
+        float: left;
+        font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+        font-size: 3em;
+        line-height: 1em;
+        margin-left: -2rem;
+      }
+
+      #testimonials span {
+        font-size: 0.75em;
+      }
+
+      #testimonials span:first-of-type {
+        font-weight: 500;
+      }
+
+      #testimonials span:last-of-type::before {
+        content: ' – ';
+      }
+
     </style>
   </head>
   <body>

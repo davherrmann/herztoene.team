@@ -169,11 +169,12 @@
 
       .intro [data-time] {
         opacity: 0;
-        transition: opacity 1s ease;
+        transition: opacity 1s ease-out;
       }
 
       .intro [data-time].active {
         opacity: 1;
+        transition: opacity 1s ease-in;
       }
 
       /* Team */

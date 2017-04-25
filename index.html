@@ -312,15 +312,33 @@
         z-index: -1;
       }
 
+      /* Pakete */
+
+      #pakete ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+      }
+
+      #pakete li {
+        background-color: #f5e6e8;
+        border: 0.25rem solid #d4aa7d;
+        color: #2d2222;
+        flex-basis: 32%;
+        padding: 0.5em;
+      }
+
     </style>
   </head>
   <body>
     <header class="primary">
       <h1>Herztöne</h1>
       <nav>
-        <a href="#team">Das Team</a>
-        <a href="#schritte">Der Weg</a>
-        <a href="#preise">Preise</a>
+        <a href="#team">Team</a>
+        <a href="#schritte">Schritte</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#pakete">Pakete</a>
       </nav>
     </header>
     <section class="intro primary">
@@ -407,6 +425,46 @@
           </p>
         </li>
       </ol>
+    </section>
+    <section id="pakete" class="primary">
+      <h2>Pakete</h2>
+      <ul>
+        <li>
+          <h3>Kleines Herz</h3>
+        </li>
+        <li>
+          <h3>Großes Herz</h3>
+        </li>
+        <li>
+          <h3>Doppelherz</h3>
+        </li>
+      </ul>
+    </section>
+    <section id="testimonials">
+      <h2>Testimonials</h2>
+      <ul>
+        <li>
+          <p>
+            Danke für einen unvergesslichen Beitrag zu unserem unvergleichlichen Fest! Auswahl der Lieder, Umsetzung, Einbindung in die Trauung - Service aus einer Hand.
+          </p>
+          <span>Marina und Christian</span>
+          <span>Hirsau</span>
+        </li>
+        <li>
+          <p>
+            Unsere Märchenhochzeit wurde Realität - dank HERZTÖNE! Tausend Dank für alles!
+          </p>
+          <span>Rachel und Michael</span>
+          <span>Langensteinbach</span>
+        </li>
+        <li>
+          <p>
+            Diese Zeilen des Dankes können wir nur mit Freudentränen der Rührung in den Augen schreiben. God bless you!
+          </p>
+          <span>Tanja und Sven</span>
+          <span>Gräfenhausen</span>
+        </li>
+      </ul>
     </section>
     <footer class="primary">
       <h2>Made with <svg aria-label="love" class="heart" viewBox="0 0 32 29.6">

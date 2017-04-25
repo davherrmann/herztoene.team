@@ -39,15 +39,21 @@
         position: relative;
       }
 
+      header > *,
+      section > *,
+      footer > * {
+        margin: 0 1rem;
+      }
+
+      /* Section */
+
       section {
         padding-bottom: 1.5rem;
         padding-top: 1.5rem;
       }
 
-      header > *,
-      section > *,
-      footer > * {
-        margin: 0 1rem;
+      section h2 {
+        margin-bottom: 0.5em;
       }
 
       /* Links */
@@ -258,6 +264,54 @@
         font-weight: lighter;
       }
 
+      /* Steps */
+
+      #schritte ol {
+        counter-reset: step;
+        list-style: none;
+        padding: 0;
+      }
+
+      #schritte ol > * + * {
+        padding-top: 1em;
+      }
+
+      #schritte li {
+        counter-increment: step;
+        position: relative;
+      }
+
+      #schritte li > * {
+        margin-left: 3rem;
+      }
+
+      #schritte li::before {
+        background-color: #f5e6e8;
+        border: 0.25rem solid #d4aa7d;
+        border-radius: 50%;
+        content: counter(step);
+        display: inline-block;
+        float: left;
+        font-size: 1.5em;
+        height: 2rem;
+        line-height: 2rem;
+        margin-top: 0.25em;
+        text-align: center;
+        width: 2rem;
+      }
+
+      #schritte li:not(:last-child)::after {
+        background-color: #d4aa7d;
+        content: '';
+        display: block;
+        height: 100%;
+        left: 1.125rem;
+        position: absolute;
+        top: 2rem;
+        width: 0.25rem;
+        z-index: -1;
+      }
+
     </style>
   </head>
   <body>
@@ -265,7 +319,7 @@
       <h1>Herztöne</h1>
       <nav>
         <a href="#team">Das Team</a>
-        <a href="#weg">Der Weg</a>
+        <a href="#schritte">Der Weg</a>
         <a href="#preise">Preise</a>
       </nav>
     </header>
@@ -325,7 +379,7 @@
         </label>
       </div>
     </section>
-    <section>
+    <section id="schritte">
       <h2>Die Schritte zur Traummusik</h2>
       <ol>
         <li>

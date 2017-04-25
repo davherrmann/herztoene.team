@@ -152,7 +152,8 @@
 
       /* Team */
 
-      #team ul {
+      #team [role="group"] {
+        border: none;
         display: flex;
         justify-content: space-between;
         list-style: none;
@@ -163,38 +164,48 @@
         overflow-x: scroll;
       }
 
-      #team li {
-        background-color: #d4aa7d;
-        border: 0.25em solid #d4aa7d;
-        border-radius: 50%;
-        color: transparent;
+      #team label {
         cursor: pointer;
         flex-shrink: 0;
-        height: 4em;
-        position: relative;
-        width: 4em;
       }
 
-      #team li:nth-child(1)::after {
+      #team label > input[type="radio"] {
+        display: block;
+        font-size: inherit;
+        height: 0;
+        margin-left: 50%;
+        padding: 0;
+        position: relative;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+
+      #team input:checked::after {
         background-color: #d4aa7d;
-        bottom: -1.5em;
         content: '';
         display: block;
         height: 1.5em;
-        left: 50%;
+        margin-left: 50%;
+        margin-top: 4em;
         position: absolute;
         transform: translateX(-50%);
         width: 0.25em;
       }
 
-      #team li + li {
+      #team label + label {
         margin-left: 0.5em;
       }
 
-      #team li > img {
+      #team label img {
+        border: 0.25em solid #d4aa7d;
         border-radius: 50%;
-        height: auto;
-        width: 100%;
+        display: block;
+        height: 4em;
+        width: 4em;
+      }
+
+      #team input:not(:checked) ~ span {
+        visibility: hidden;
       }
 
       #team span {
@@ -230,17 +241,53 @@
     <section id="team">
       <h2>Wir sind die Herztöne</h2>
       <p>Das sind wir. Alle verheiratet – alle mithilfe der Musik der Herztöne.</p>
-      <ul>
-        <li><img src="christine.jpg" /></li>
-        <li><img src="daniel.jpg" /></li>
-        <li><img src="jennifer.jpg" /></li>
-        <li><img src="michael.jpg" /></li>
-        <li><img src="david.jpg" /></li>
-        <li><img src="sabine.jpg" /></li>
-        <li><img src="rahel.jpg" /></li>
-        <li><img src="markus.jpg" /></li>
-      </ul>
-      <span>Christine – Geige, Piano, Songwriter, Dirigent</span>
+      <div role="group">
+        <label>
+          <input type="radio" name="person" checked/>
+          <img src="christine.jpg" />
+          <span>Christine – Songwriter, Violine, Piano, Keyboard, Musikalische Umsetzung</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="daniel.jpg" />
+          <span>Daniel – Percussions, Tenor</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="jennifer.jpg" />
+          <span>Jennifer – Piano, Harfe</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="michael.jpg" />
+          <span>Michael – Keyboard, Piano</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="david.jpg" />
+          <span>David – Gitarre, Piano, Keyboard, Bass</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="sabine.jpg" />
+          <span>Sabine – Piano, Keyboard</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="rahel.jpg" />
+          <span>Rahel – Violine, Viola, Piano, Keyboard, Orgel, Musikalische Umsetzung</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="markus.jpg" />
+          <span>Markus – Piano, Keyboard, Songwriter</span>
+        </label>
+        <label>
+          <input type="radio" name="person" />
+          <img src="drums.jpg" />
+          <span>Ergänzung – Drums, Querflöte, Cello,...</span>
+        </label>
+      </div>
     </section>
     <section class="primary">
       <h2>Die Schritte zur Traummusik</h2>

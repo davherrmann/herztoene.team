@@ -161,6 +161,15 @@
         transform: translate(-25%, -50%);
       }
 
+      .intro [data-time] {
+        opacity: 0;
+        transition: opacity 1s ease;
+      }
+
+      .intro [data-time].active {
+        opacity: 1;
+      }
+
       /* Team */
 
       #team [role="group"] {
@@ -377,6 +386,32 @@
       }
 
     </style>
+
+    <script>
+      var $ = document.querySelector.bind(document)
+      var $$ = document.querySelectorAll.bind(document)
+
+      window.onload = function () {
+        var audioElement = $('audio')
+
+        audioElement.addEventListener('timeupdate', function () {
+          var time = audioElement.currentTime
+
+          var toShow = Array.from($$('[data-time]')).reduce(function (toShow, current) {
+            return time > current.dataset.time && current.dataset.time > toShow.dataset.time
+              ? current
+              : toShow
+          })
+
+          var currentShowing = $('[data-time].active')
+
+          if (currentShowing !== toShow) {
+            currentShowing.classList.remove('active')
+            toShow.classList.add('active')
+          }
+        })
+      }
+    </script>
   </head>
   <body>
     <header class="primary">
@@ -391,7 +426,8 @@
     <section class="intro primary">
       <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
       <button onClick="document.querySelector('audio').play()"></button>
-      <p>Stell Dir vor, zu dieser Musik einzulaufen...</p>
+      <p data-time="0" class="active">Stell Dir vor, zu dieser Musik einzulaufen...</p>
+      <p data-time="3">...und alle Deine Freunde freuen sich mit Dir!</p>
     </section>
     <section id="team">
       <h2>Wir sind die Herztöne</h2>

@@ -316,6 +316,7 @@
 
       #pakete ul {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         list-style: none;
         padding: 0;
@@ -327,6 +328,16 @@
         color: #2d2222;
         flex-basis: 32%;
         padding: 0.5em;
+      }
+
+      @media (max-width: 48rem) {
+        #pakete li {
+          flex-basis: 100%;
+        }
+
+        #pakete li + li {
+          margin-top: 1em;
+        }
       }
 
       /* Testimonials */

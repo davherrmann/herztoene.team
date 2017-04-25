@@ -39,6 +39,11 @@
         position: relative;
       }
 
+      section {
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
+      }
+
       header > *,
       section > *,
       footer > * {
@@ -158,7 +163,7 @@
         justify-content: space-between;
         list-style: none;
         margin: 0;
-        padding: 2.5em 1em 4.5em;
+        padding: 2.5em 1em 4em;
         overflow: hidden;
         overflow-x: scroll;
       }
@@ -223,6 +228,34 @@
         padding: 1em calc((100vw - 900px) / 2);
         position: absolute;
         right: 0;
+      }
+
+      /* Heart */
+
+      .heart {
+        animation: pulse 3s ease infinite;
+        fill: #BF443A;
+        height: 1em;
+        position: relative;
+        top: 0.1em;
+      }
+
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        15% { transform: scale(1.2); }
+        30% { transform: scale(1); }
+      }
+
+      /* Footer */
+
+      footer {
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+      }
+
+      footer h2 {
+        font-size: 0.75rem;
+        font-weight: lighter;
       }
 
     </style>
@@ -292,9 +325,41 @@
         </label>
       </div>
     </section>
-    <section class="primary">
+    <section>
       <h2>Die Schritte zur Traummusik</h2>
+      <ol>
+        <li>
+          <h3>Beratung</h3>
+          <p>
+            In einem ersten Vorgespräch schildern Sie uns Ihre Wünsche. Erste Ideen werden skizziert.
+          </p>
+        </li>
+        <li>
+          <h3>Umsetzung</h3>
+          <p>
+            Ihre Wünsche und Ideen kommen nun in unseren musikalischen Maschinenraum, wo sie umgesetzt und eingeübt werden.
+          </p>
+        </li>
+        <li>
+          <h3>Ihr großer Tag</h3>
+          <p>
+            An Ihrem großen Tag geht es nur um Sie. Sie stehen im Mittelpunkt. Damit das so sein kann, geschehen unser Auf- und Abbau völlig geräuschlos im Hintergrund.
+          </p>
+        </li>
+        <li>
+          <h3>Erinnerungen</h3>
+          <p>
+            Nach Möglichkeit finden Sie - nachdem Sie wundervolle Flitterwochen verlebt haben - in Ihrem Briefkasten Ihre exklusive Ein- und Auszugsstücke auf CD.
+          </p>
+        </li>
+      </ol>
     </section>
+    <footer class="primary">
+      <h2>Made with <svg aria-label="love" class="heart" viewBox="0 0 32 29.6">
+        <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+        c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z"/>
+      </svg> by Herztöne</h2>
+    </footer>
     <!--<main>
       <article>
         <h2>Ihre Herzenswünsche...</h2>

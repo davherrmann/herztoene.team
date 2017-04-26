@@ -241,6 +241,7 @@
       }
 
       #team label img {
+        background-color: #d4aa7d;
         border: 0.25em solid #d4aa7d;
         border-radius: 50%;
         display: block;
@@ -412,7 +413,11 @@
       var $ = document.querySelector.bind(document)
       var $$ = document.querySelectorAll.bind(document)
 
-      window.onload = function () {
+      window.addEventListener('DOMContentLoaded', function () {
+        Array.from($$('[data-src]')).forEach(function (img) {
+          img.setAttribute('src', img.dataset.src)
+        })
+
         var audioElement = $('audio')
 
         audioElement.addEventListener('timeupdate', function () {
@@ -434,7 +439,7 @@
             toShow.classList.add('active')
           }
         })
-      }
+      })
     </script>
   </head>
   <body>
@@ -474,47 +479,47 @@
       <div role="group">
         <label>
           <input type="radio" name="person" checked/>
-          <img src="christine.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="christine.jpg" />
           <span><strong>Christine</strong> – Songwriter, Violine, Piano, Keyboard, Musikalische Umsetzung</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="daniel.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="daniel.jpg" />
           <span><strong>Daniel</strong> – Percussions, Tenor</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="jennifer.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="jennifer.jpg" />
           <span><strong>Jennifer</strong> – Piano, Harfe</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="michael.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="michael.jpg" />
           <span><strong>Michael</strong> – Keyboard, Piano</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="david.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="david.jpg" />
           <span><strong>David</strong> – Gitarre, Piano, Keyboard, Bass</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="sabine.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="sabine.jpg" />
           <span><strong>Sabine</strong> – Piano, Keyboard</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="rahel.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="rahel.jpg" />
           <span><strong>Rahel</strong> – Violine, Viola, Piano, Keyboard, Orgel, Musikalische Umsetzung</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="markus.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="markus.jpg" />
           <span><strong>Markus</strong> – Piano, Keyboard, Songwriter</span>
         </label>
         <label>
           <input type="radio" name="person" />
-          <img src="drums.jpg" />
+          <img src="data:image/png;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" data-src="drums.jpg" />
           <span><strong>Ergänzung</strong> – Drums, Querflöte, Cello,...</span>
         </label>
       </div>

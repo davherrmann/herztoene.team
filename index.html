@@ -113,7 +113,7 @@
       /* Intro */
 
       .intro {
-        background-image: url(https://static.wixstatic.com/media/8a455f121bcc46a0bbb724a330b78ddb.jpg/v1/crop/x_137,y_593,w_980,h_735,q_85/8a455f121bcc46a0bbb724a330b78ddb.jpg);
+        background-image: url(https://images.unsplash.com/photo-1490869787788-4875a9093205?w=767);
         background-position: center;
         background-size: cover;
         border: 0.5em solid #e4ba7d;
@@ -139,7 +139,7 @@
       }
 
       .intro::after {
-        background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 0%, rgba(45, 34, 34, 0.98) 85%, rgba(45, 34, 34, 1) 100%);
+        background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 20%, rgba(45, 34, 34, 0.98) 88%, rgba(45, 34, 34, 1) 100%);
         bottom: -1em;
         content: '';
         left: -1em;
@@ -408,6 +408,10 @@
       var $$ = document.querySelectorAll.bind(document)
 
       window.addEventListener('DOMContentLoaded', function () {
+        Array.from($$('[data-img]')).forEach(function (element) {
+          document.createElement('img').src = element.dataset.img
+        })
+
         Array.from($$('[data-src]')).forEach(function (img) {
           img.setAttribute('src', img.dataset.src)
         })
@@ -453,20 +457,22 @@
       <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
       <button onClick="document.querySelector('audio').play()"></button>
       <p data-time="0" class="active">Stell Dir einmal diese Musik für Deine Hochzeit vor...</p>
-      <p data-time="3" data-img="wayne-dery-45610.jpg">Erwartungsvoll stehst Du vor der Tür.</p>
+      <p data-time="3" data-img="https://images.unsplash.com/photo-1471834161355-46f16f9f6152?w=767">Erwartungsvoll stehst Du vor der Tür.</p>
       <p data-time="7">Kaum kannst Du es erwarten...</p>
       <p data-time="12">In Deinem Kopf gehst Du noch einmal durch, ...</p>
-      <p data-time="16">...welch ein Wunder es ist,...</p>
+      <p data-time="16" data-img="https://images.unsplash.com/photo-1460364157752-926555421a7e?w=767">...welch ein Wunder es ist,...</p>
       <p data-time="20">...dass Du heute hier stehst.</p>
-      <p data-time="34">Auf den Ruf der Trompete öffnen sich die Türen, ...</p>
-      <p data-time="39">...die Dich bis jetzt noch von Deinem Liebsten trennen.</p>
-      <p data-time="44">Die Hochzeitsgäste drehen sich erwartungsvoll um:</p>
-      <p data-time="50">Wann wirst Du loslaufen?</p>
-      <p data-time="66">Der zweifache Paukenschlag zeigt Dir an:</p>
+      <p data-time="34" data-img="https://images.unsplash.com/photo-1476554264902-ad3fd8987705?w=767">Während sich die Türen öffnen, ...</p>
+      <p data-time="39">...denkst Du an Eure ersten gemeinsamen Ausflüge...</p>
+      <p data-time="44" data-img="https://images.unsplash.com/photo-1481078906426-9bf95a7ec345?w=767">...und an Eueren ersten Kuss.</p>
+      <p data-time="50">Und natürlich auch an die Momente, ...</p>
+      <p data-time="55" data-img="https://images.unsplash.com/photo-1480184554339-226ca2ced2e2?w=767">...die Euch zu diesem besonderen Tag brachten.</p>
+      <p data-time="60" data-img="https://images.unsplash.com/photo-1467730572233-b2d465ec6e89?w=767">Du könntest ewig in diesen Erinnerungen schwelgen, ...</p>
+      <p data-time="66">...doch da zeigt Dir der Paukenschlag an:</p>
       <p data-time="70">Gleich ist es soweit!</p>
       <p data-time="74">Alle Hochzeitsgäste erheben sich...</p>
       <p data-time="78">...und Du beginnst, langsam in den Saal zu schreiten.</p>
-      <p data-time="85">Freundlich strahlst Du an, wen Du erblickst...</p>
+      <p data-time="85" data-img="https://images.unsplash.com/photo-1489278353717-f64c6ee8a4d2?dpr=2&w=767">Freundlich strahlst Du an, wen Du erblickst...</p>
       <p data-time="90">Alle Deine Liebsten sind versammelt, ...</p>
       <p data-time="95">...um sich heute mit Dir zu freuen!</p>
     </section>

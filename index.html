@@ -113,6 +113,9 @@
       /* Intro */
 
       .intro {
+        background-image: url(https://static.wixstatic.com/media/8a455f121bcc46a0bbb724a330b78ddb.jpg/v1/crop/x_137,y_593,w_980,h_735,q_85/8a455f121bcc46a0bbb724a330b78ddb.jpg);
+        background-position: center;
+        background-size: cover;
         border: 0.5em solid #e4ba7d;
         border-left: none;
         border-right: none;
@@ -135,25 +138,14 @@
         z-index: 1;
       }
 
-      .intro::before,
       .intro::after {
+        background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 0%, rgba(45, 34, 34, 0.98) 85%, rgba(45, 34, 34, 1) 100%);
         bottom: -1em;
         content: '';
-        display: block;
         left: -1em;
         position: absolute;
         right: -1em;
         top: -1em;
-      }
-
-      .intro::before {
-        background-image: url(https://static.wixstatic.com/media/8a455f121bcc46a0bbb724a330b78ddb.jpg/v1/crop/x_137,y_593,w_980,h_735,q_85/8a455f121bcc46a0bbb724a330b78ddb.jpg);
-        background-position: center;
-        background-size: cover;
-      }
-
-      .intro::after {
-          background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 0%, rgba(45, 34, 34, 0.98) 85%, rgba(45, 34, 34, 1) 100%);
       }
 
       .intro button {
@@ -437,6 +429,9 @@
           if (currentShowing !== toShow) {
             currentShowing.classList.remove('active')
             toShow.classList.add('active')
+            if (toShow.dataset.img) {
+              $('.intro').style.backgroundImage = 'url(' + toShow.dataset.img + ')'
+            }
           }
         })
       })
@@ -456,7 +451,7 @@
       <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
       <button onClick="document.querySelector('audio').play()"></button>
       <p data-time="0" class="active">Stell Dir einmal diese Musik für Deine Hochzeit vor...</p>
-      <p data-time="3">Erwartungsvoll stehst Du vor der Tür.</p>
+      <p data-time="3" data-img="wayne-dery-45610.jpg">Erwartungsvoll stehst Du vor der Tür.</p>
       <p data-time="7">Kaum kannst Du es erwarten...</p>
       <p data-time="12">In Deinem Kopf gehst Du noch einmal durch, ...</p>
       <p data-time="16">...welch ein Wunder es ist,...</p>

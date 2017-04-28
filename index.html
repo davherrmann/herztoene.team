@@ -337,7 +337,7 @@
 
       /* Pakete */
 
-      #pakete ul {
+      #pakete > ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -345,20 +345,55 @@
         padding: 0;
       }
 
-      #pakete li {
+      #pakete > ul > li {
         background-color: #f5eeee;
-        border: 0.25rem solid #e4ba7d;
         color: #2d2222;
         flex-basis: 32%;
+        position: relative;
+      }
+
+      #pakete > ul > li > * {
         padding: 0.5em;
       }
 
+      #pakete > ul > li h3 {
+        background-color: #e4ba7d;
+        font-weight: 400;
+        padding-bottom: 2em;
+        text-align: center;
+      }
+
+      #pakete > ul > li > span {
+        background-color: #2d2222;
+        border: 0.25em solid #e4ba7d;
+        border-radius: 50%;
+        color: #f5eeee;
+        display: inline-block;
+        height: 4em;
+        left: 50%;
+        line-height: 3.5em;
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 4em;
+      }
+
+      #pakete > ul > li > ul {
+        padding-top: 2.5em;
+      }
+
+      #pakete > ul > li > ul li {
+        line-height: 2em;
+        text-align: center;
+      }
+
       @media (max-width: 48rem) {
-        #pakete li {
+        #pakete > ul > li {
           flex-basis: 100%;
         }
 
-        #pakete li + li {
+        #pakete > ul > li + li {
           margin-top: 1em;
         }
       }
@@ -561,12 +596,32 @@
       <ul>
         <li>
           <h3>Kleines Herz</h3>
+          <span>600€</span>
+          <ul>
+            <li>Einzugsstück</li>
+            <li>normale Besetzung</li>
+            <li>Aufnahme auf CD</li>
+          </ul>
         </li>
         <li>
           <h3>Großes Herz</h3>
+          <span>850€</span>
+          <ul>
+            <li>Ein- &amp; Auszugsstück</li>
+            <li>Liedbegleitung im Gottesdienst</li>
+            <li>normale Besetzung</li>
+            <li>Aufnahme auf CD</li>
+          </ul>
         </li>
         <li>
           <h3>Doppelherz</h3>
+          <span>1300€</span>
+          <ul>
+            <li>Ein- &amp; Auszugsstück</li>
+            <li>Liedbegleitung im Gottesdienst</li>
+            <li>große Besetzung</li>
+            <li>Aufnahme auf CD</li>
+          </ul>
         </li>
       </ul>
     </section>

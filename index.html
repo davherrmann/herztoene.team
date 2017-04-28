@@ -86,9 +86,14 @@
       /* Header */
 
       header {
+        left: 0;
         line-height: 2em;
         padding-bottom: 0.5rem;
         padding-top: 0.5rem;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: 10;
       }
 
       header h1 {
@@ -108,12 +113,15 @@
         header > * {
           display: block;
         }
+
+        header nav {
+          line-height: 1.5rem;
+        }
       }
 
       @media (max-width: 24rem) {
         header nav {
           font-size: 0.85em;
-          line-height: 1.5rem;
         }
 
         header nav > * + * {
@@ -131,11 +139,13 @@
         border-left: none;
         border-right: none;
         height: calc(100vh - 3rem);
+        margin-top: 3rem;
       }
 
-      @media (max-width: 38rem) {
+      @media (max-width: 32rem) {
         .intro {
           height: calc(100vh - 4.5rem);
+          margin-top: 4.5rem;
         }
       }
 

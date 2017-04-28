@@ -85,21 +85,32 @@
 
       /* Header */
 
+      header {
+        line-height: 2em;
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+      }
+
+      header h1 {
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
       header > * {
-        display: inline;
+        display: inline-block;
       }
 
       header nav > * + * {
         margin-left: 1em;
       }
 
-      @media (max-width: 38rem) {
+      @media (max-width: 32rem) {
         header > * {
           display: block;
         }
       }
 
-      @media (max-width: 28rem) {
+      @media (max-width: 24rem) {
         header nav {
           font-size: 0.85em;
           line-height: 1.5rem;
@@ -116,15 +127,15 @@
         background-image: url(https://images.unsplash.com/photo-1490869787788-4875a9093205?w=767);
         background-position: center;
         background-size: cover;
-        border: 0.5em solid #e4ba7d;
+        border: 0.25rem solid #e4ba7d;
         border-left: none;
         border-right: none;
-        height: calc(100vh - 5rem);
+        height: calc(100vh - 3rem);
       }
 
       @media (max-width: 38rem) {
         .intro {
-          height: calc(100vh - 6.5rem);
+          height: calc(100vh - 4.5rem);
         }
       }
 
@@ -150,7 +161,7 @@
 
       .intro button {
         background-color: #2d2222;
-        border: 0.5em solid #e4ba7d;
+        border: 0.25rem solid #e4ba7d;
         border-radius: 50%;
         cursor: pointer;
         height: 5em;
@@ -482,7 +493,7 @@
   </head>
   <body>
     <header class="primary">
-      <h1>Herztöne</h1>
+      <h1><a href="/">Herztöne</a></h1>
       <nav>
         <a href="#team">Team</a>
         <a href="#schritte">Schritte</a>

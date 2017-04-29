@@ -131,7 +131,7 @@
 
       /* Intro */
 
-      .intro {
+      #intro {
         background-image: url(https://images.unsplash.com/photo-1490869787788-4875a9093205?w=767);
         background-position: center;
         background-size: cover;
@@ -143,23 +143,23 @@
       }
 
       @media (max-width: 32rem) {
-        .intro {
+        #intro {
           height: calc(100vh - 4.5rem);
           margin-top: 4.5rem;
         }
       }
 
-      .intro > p {
+      #intro > p {
         bottom: 1em;
         font-size: 1.5em;
         position: absolute;
       }
 
-      .intro > * {
+      #intro > * {
         z-index: 1;
       }
 
-      .intro::after {
+      #intro::after {
         background: linear-gradient(to bottom, rgba(45, 34, 34, 0) 20%, rgba(45, 34, 34, 0.98) 88%, rgba(45, 34, 34, 1) 100%);
         bottom: -1em;
         content: '';
@@ -169,7 +169,7 @@
         top: -1em;
       }
 
-      .intro button {
+      #intro button {
         background-color: #2d2222;
         border: 0.25rem solid #e4ba7d;
         border-radius: 50%;
@@ -183,7 +183,7 @@
         width: 5em;
       }
 
-      .intro button::before {
+      #intro button::before {
         border: 1.25em solid transparent;
         border-left: 2em solid #f5eeee;
         content: "";
@@ -194,12 +194,12 @@
         transform: translate(-25%, -50%);
       }
 
-      .intro [data-time] {
+      #intro [data-time] {
         opacity: 0;
         transition: opacity 1s ease-out;
       }
 
-      .intro [data-time].active {
+      #intro [data-time].active {
         opacity: 1;
         transition: opacity 1s ease-in;
       }
@@ -494,7 +494,7 @@
             currentShowing.classList.remove('active')
             toShow.classList.add('active')
             if (toShow.dataset.img) {
-              $('.intro').style.backgroundImage = 'url(' + toShow.dataset.img + ')'
+              $('#intro').style.backgroundImage = 'url(' + toShow.dataset.img + ')'
             }
           }
         })
@@ -503,7 +503,7 @@
   </head>
   <body>
     <header class="primary">
-      <h1><a href="/">Herztöne</a></h1>
+      <h1><a href="#intro">Herztöne</a></h1>
       <nav>
         <a href="#team">Team</a>
         <a href="#schritte">Schritte</a>
@@ -511,7 +511,7 @@
         <a href="#testimonials">Testimonials</a>
       </nav>
     </header>
-    <section class="intro primary">
+    <section id="intro" class="primary">
       <audio src="https://music.wixstatic.com/mp3/a452be_decbdf114dee445399a4e40b6edd4e97.mp3" preload="auto"></audio>
       <button onClick="document.querySelector('audio').play()"></button>
       <p data-time="0" class="active">Stell Dir einmal diese Musik für Deine Hochzeit vor...</p>

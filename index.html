@@ -433,14 +433,14 @@
       }
 
       /* Bilder */
-      #images ul {
+      #bilder ul {
         display: flex;
         flex-wrap: wrap;
         list-style: none;
         padding-left: 0;
       }
 
-      #images li {
+      #bilder li {
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 8px;
@@ -451,47 +451,47 @@
         overflow: hidden;
       }
 
-      #images .break {
+      #bilder .break {
         flex-basis: 100%;
         height: 0.75em;
       }
 
-      #images li + li {
+      #bilder li + li {
         margin-left: 0.75em;
       }
 
-      #images li:nth-of-type(1) {
+      #bilder li:nth-of-type(1) {
         background-image: url("about_03.jpg");
         background-size: 120%;
       }
 
-      #images li:nth-of-type(2) {
+      #bilder li:nth-of-type(2) {
         background-image: url("about_02.jpg");
       }
 
-      #images li:nth-of-type(3) {
+      #bilder li:nth-of-type(3) {
         background-image: url("about_01.jpg");
         background-position: center 25%;
       }
 
-      #images li:nth-of-type(4) {
+      #bilder li:nth-of-type(4) {
         background-image: url("about_07.jpg");
         background-size: 130%;
         background-position: 70% 70%;
       }
 
-      #images li:nth-of-type(5) {
+      #bilder li:nth-of-type(5) {
         background-image: url("about_05.jpg");
         background-position: 70% center;
       }
 
       @media (max-width: 50rem) {
-        #images li:nth-of-type(1),
-        #images li:nth-of-type(4) {
+        #bilder li:nth-of-type(1),
+        #bilder li:nth-of-type(4) {
           display: none;
         }
 
-        #images li + li {
+        #bilder li + li {
           margin-left: 0;
         }
       }
@@ -547,6 +547,7 @@
         <a href="#team">Team</a>
         <a href="#schritte">Schritte</a>
         <a href="#testimonials">Testimonials</a>
+        <a href="#bilder">Bilder</a>
       </nav>
     </header>
     <section id="intro">
@@ -664,7 +665,7 @@
         </li>
       </ul>
     </section>
-    <section id="images">
+    <section id="bilder">
       <h2>Bilder</h2>
       <ul>
         <li></li>

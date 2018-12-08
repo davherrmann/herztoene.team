@@ -269,7 +269,7 @@
       /* Footer */
 
       footer {
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         padding-top: 2rem;
       }
 
@@ -432,6 +432,69 @@
         content: ' – ';
       }
 
+      /* Bilder */
+      #images ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding-left: 0;
+      }
+
+      #images li {
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 8px;
+        flex-basis: 10%;
+        flex-grow: 1;
+        height: 13em;
+        filter: grayscale(1) contrast(1.2) sepia(0.35) hue-rotate(330deg) opacity(1);
+        overflow: hidden;
+      }
+
+      #images .break {
+        flex-basis: 100%;
+        height: 0.75em;
+      }
+
+      #images li + li {
+        margin-left: 0.75em;
+      }
+
+      #images li:nth-of-type(1) {
+        background-image: url("about_03.jpg");
+        background-size: 120%;
+      }
+
+      #images li:nth-of-type(2) {
+        background-image: url("about_02.jpg");
+      }
+
+      #images li:nth-of-type(3) {
+        background-image: url("about_01.jpg");
+        background-position: center 25%;
+      }
+
+      #images li:nth-of-type(4) {
+        background-image: url("about_07.jpg");
+        background-size: 130%;
+        background-position: 70% 70%;
+      }
+
+      #images li:nth-of-type(5) {
+        background-image: url("about_05.jpg");
+        background-position: 70% center;
+      }
+
+      @media (max-width: 50rem) {
+        #images li:nth-of-type(1),
+        #images li:nth-of-type(4) {
+          display: none;
+        }
+
+        #images li + li {
+          margin-left: 0;
+        }
+      }
     </style>
 
     <link href="https://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans" rel="stylesheet">
@@ -606,6 +669,18 @@
           <span>Tanja und Sven</span>
           <span>Gräfenhausen</span>
         </li>
+      </ul>
+    </section>
+    <section id="images">
+      <h2>Bilder</h2>
+      <ul>
+        <li></li>
+        <li></li>
+        <span class="break"></span>
+        <li></li>
+        <span class="break"></span>
+        <li></li>
+        <li></li>
       </ul>
     </section>
     <footer class="primary">
